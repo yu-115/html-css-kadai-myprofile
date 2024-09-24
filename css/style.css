@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  color: #000000;
+  background-color: #ffffff;
+  /*Googleフォントの指定*/
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.index-h2 {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+}
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+p {
+  font-size: 18px;
+}
+
+/*ヘッダー*/
+header {
+  max-width: 960px;/*max-widthでなく、widthでpx数を指定すると画面幅に応じた伸縮がなくなる*/
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;/*headerを中央に寄せる*/
+  align-items: center;/*header内の要素の縦方向を中央に揃える*/
+}
+#myprofile {
+  font-size: 34px;
+  font-weight: bold;
+  border: solid 1px #000000;
+  padding: 0 15px 0 15px;/*文字を囲む枠線の余白調整*/
+}
+#nav-pc {
+  font-size: 34px;
+  font-weight: bold;
+}
+#nav-pc > a {
+  margin-left: 20px;
+  text-decoration: none;
+}
+#nav-pc > a:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+/* メインビジュアル */
+#main-visual > img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*アバウト*/
+#about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about-content img {
+  border-radius: 142px;
+  margin-right: 150px;
+}
+#about-text > ul {
+  line-height: 15px;
+}
+
+/* ワークス */
+#works-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 960px;
+}
+#works-content > div {
+  width: 30%;
+}
+.works-photo {
+  max-width: 310px;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/*ここからスマートフォン向け設定*/
+@media screen and (max-width: 767px) {
+  #nav-pc {
+    font-size: 22px;
+  }
+  #nav-pc > a {
+    margin-left: 10px;
+  }
+
+  /*アバウト-sp*/
+#about-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#about-content > img {
+  margin: 0 auto;
+}
+
+/* ワークス-sp */
+#works-content {
+  display: flex;
+  flex-direction: column;
+}
+#works-content > div {
+  width: 100%;
+  text-align: center;
+}
+.works-photo {
+  max-width: 767px;
+}
+}
