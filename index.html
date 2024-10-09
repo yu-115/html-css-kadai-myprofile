@@ -10,23 +10,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   </head>
   <body>
     <header>
-      <h2 id="myprofile">MyProfile</h2>
+      <a id="myprofile" href="#">My Profile</a>
       <nav id="nav-pc">
-        <a href="index.html#about">About</a>
-        <a href="index.html#works">Works</a>
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
       </nav>
     </header>
     
     <main>
       <article>
-        <div id="main-visual">
-          <img src="images/main.png" alt="メインビジュアル">
+        <div class="carousel">
+          <div><img src="images/main.png"></div>
+          <div><img src="images/main2.png"></div>
+          <div><img src="images/main3.png"></div>
         </div>
 
-        <section id="about">
+        <section id="about" class="section">
           <h2 class="index-h2">About</h2>
           <div id="about-content">
             <img src="images/about.png" alt="自分の写真">
@@ -42,11 +46,17 @@
           </div>
         </section>
 
-        <section id="works">
+        <section id="works" class="section">
           <h2 class="index-h2">Works</h2>
+          <a id="back-btn" href="#">TOP</a>
+          <div id="grayBack"></div>
+          <div id="modal">
+            <img id="modal-photo" src="" alt="モーダルに表示する拡大画像">
+            <button id="modal-close-btn">×</button>
+          </div>
           <div id="works-content">
             <div id="works1">
-              <img class="works-photo" src="images/works1.png" alt="日本海の写真">
+              <img id="modal-open-btn" class="works-photo" src="images/works1.png" alt="日本海の写真">
               <p class="works-text">新潟に訪れた際に、日本海の雄大さに魅了されて撮影した1枚</p>
             </div>
             <div id="works2">
@@ -65,5 +75,9 @@
     <footer>
       <p>&copy;MyProfile. All rights reserved.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
